@@ -77,7 +77,8 @@ NSDictionary *substitutions;
         NSString *trimmedWord = [word stringByReplacingCharactersInRange:foundRange withString:@""];
 
         // fifth tone: neutral
-        if (number == 5) {
+        if (number == 5
+            || number == 0) {
             return trimmedWord;
         }
 
