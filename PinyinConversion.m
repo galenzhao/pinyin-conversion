@@ -39,7 +39,7 @@ NSDictionary *substitutions;
     NSRange vowelRange = NSMakeRange(vowelIndex, 1);
     NSString *vowel = [word substringWithRange:vowelRange];
 
-    NSString *replacement = substitutions[vowel][tone - 1];
+    NSString *replacement = [[substitutions objectForKey:vowel] objectAtIndex:tone-1];//substitutions[vowel][tone - 1];
 
     if (!replacement) {
         return word;
